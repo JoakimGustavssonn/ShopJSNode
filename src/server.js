@@ -40,13 +40,14 @@ const oauth2Client = new OAuth2(
   });
   
   console.log("After transporter");
-  // verify connection configuration
+
+   /* Verify connection configuration */
   transporter.verify(function(error) {
     if (error) {
       console.log(error);
       console.log("Error equals true");
     } else {
-      console.log("Server is ready to take our messages");
+      console.log("Server is ready");
     }
   });
 
@@ -78,7 +79,7 @@ const oauth2Client = new OAuth2(
                       transporter.sendMail(mailOption, (err, info ) => {
                       
                         tls: {
-                          rejectUnauthorized: false
+                          rejectUnauthorized: false // Fix from google, else mail got stucked by error messages
                         }
                         if (err) 
                         {
