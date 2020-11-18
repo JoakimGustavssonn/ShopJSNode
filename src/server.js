@@ -41,7 +41,7 @@ const oauth2Client = new OAuth2(
   
   console.log("After transporter");
   // verify connection configuration
-  transporter.verify(function(error, success) {
+  transporter.verify(function(error) {
     if (error) {
       console.log(error);
       console.log("Error equals true");
@@ -55,23 +55,23 @@ const oauth2Client = new OAuth2(
   
   router.post('/api/contact', [
   
-    
-  body('email').isEmail(),
-  body('customername').isLength({ min: 2}),
-  body('message').isLength({ min: 5 })
+/* POST requirements to check before sending Email from express validator*/
+  body('email').isEmail(),  // Email field needs to be a valid email @something.com etc
+  body('customername').isLength({ min: 2}), // CustomerName field cant be less than 2 characters
+  body('message').isLength({ min: 5 }) // Message field cant be less than 5 characters
   ], (req, res) => {
-              // Finds the validation errors in this request and wraps them in an object with handy functions
+              
               const errors = validationResult(req);
               if (!errors.isEmpty()) {
                 return res.status(400).json({ errors: errors.array() });
               }
   
                 const mailOption = {
-                  from: `${req.body.email} <noreply@rosenvanteshop.se>`, // sender address
-                  to: config.user,
-                  replyTo: `${req.body.email}`,
-                  subject: `${req.body.customername}`,
-                  text: `${req.body.message}`
+                  from: `${req.body.email} <noreply@rosenvanteshop.se>`, // EndUser emailadress
+                  to: config.user, // hardcoded send to adress
+                  replyTo: `${req.body.email}`, // Config of "replyto" field sets the email adress from EndUser above
+                  subject: `${req.body.customername}`, //Subject of message sets to CustomerName
+                  text: `${req.body.message}` // Message text field
                     }
   
   
