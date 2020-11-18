@@ -1,0 +1,488 @@
+/* Set Color and Font variables*/
+:root {
+    --primary-color: #b1a896;
+    --secondary-color: #0f1f22;
+    
+    --primary-font-color: white;
+    --standard-font-family: 'Raleway', Segoe UI, Verdana, sans-serif;
+    --secondary-font-family: Segoe UI, Verdana, sans-serif;
+    --standard-font-size: 1.1rem;
+ }
+
+ /* Set elements to a default zero padding and margin */
+* {
+    padding:0;
+    margin:0;
+  }
+
+/* Base style */
+html {
+    font-family: var(--standard-font-family);
+    font-size: var(--standard-font-size);
+    color: var(--primary-font-color);
+ }
+
+body {
+    background-color: var(--primary-color);
+  
+}
+
+
+/* Creates a styled Horizontal line that applies to <hr> tag */
+hr {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border-color: var(--secondary-color);
+    border-top:none;
+ }
+
+ .hero-image {
+  display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../img/hero_red_mittens.JPG);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 90vh;
+  width: 100%;
+  
+  
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
+/* Header with a fixed height and grid columns "logo 1/3 and search 2/3" */
+header {
+    display:none;
+    background-color: var(--primary-color);
+
+  }
+
+
+/* Navigation */
+
+nav ul { 
+  text-align: center;
+  padding: initial;
+  font-weight: 300;
+  font-family: var(--standard-font-family);
+  
+  
+}
+nav li {
+  display: inline-block;
+  height: 40px;
+  border-radius: 2px;
+  padding: 10px
+}
+nav li:hover {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+}
+nav a {color:inherit;}
+ 
+/* Center H1 text*/
+h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 56px;
+    font-family: 'Courgette', cursive;
+  }
+  h2 {
+    text-align: center;
+    padding: 20px;
+  }
+
+/* Equal padding on all P elements */
+p {
+    padding: 10px;
+  }
+
+  .gallery_btn {
+  background-color: rgba(255, 52, 170, 0.421);
+  color: #fff;
+  padding:10px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 12px 8px rgba(255, 255, 255, 0.5);
+  }
+
+  .gallery_btn:hover {
+    background-color: var(--secondary-color);
+  }
+
+  
+
+
+/* Forms */
+input:valid {
+  border: 1px solid;
+}
+input:invalid {
+  border: 1px solid;
+}
+input[type="text"], input[type="email"], select, input[type="submit"] {
+  
+  margin: 20px 0;
+  padding: 2px;
+  
+}
+
+
+/*Styles applies to form named contact-us */
+form[name="contact-us"]{
+  border: 1px solid white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  
+}
+
+/* Styles applies to the textarea element inside form named contact-us */
+form[name="contact-us"] textarea {
+  resize: none;
+  width: 80%;
+  height: 100px;
+  font-family:var(--secondary-font-family) ;
+  font-size: var(--standard-font-size);
+ }
+
+ /* Styles applies to the input element with type submit inside form named contact-us */
+form[name="contact-us"] input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding:10px;
+}
+
+/* Styles applies to the input element with type submit inside form named contact-us */
+form[name="contact-us"] input[type="submit"]:hover{
+background-color: var(--secondary-color);
+}
+
+
+/* Card section */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-around;
+    
+  }
+  
+  .cards-item {
+    padding: 1rem;
+    display:flex;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.3);
+    -webkit-transition: transform ease-in-out .3s, height ease-in-out .3s;
+	  transition: transform ease-in-out .3s, height ease-in-out .3s;
+  }
+  
+
+  
+  .card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  
+  /*Placeholder for the image */
+  .card-image {
+    border: 1px solid white;
+    padding-top: 60%; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #myImg {
+    background-image: url("../img/Hero_image.jpg");
+  }
+
+  
+  /*Card title, fixed font size and color*/
+  .card-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+  }
+
+  .card-text {
+   flex: 1 1 auto;
+    font-size: var(--standard-font-size);
+    line-height: 1.5;
+    letter-spacing: 2px;
+    
+  }
+
+
+  .footer-container {
+    display: block;
+    background-color: var(--secondary-color);
+    font-size: 8px;
+    height: 30px;
+    padding-top:10px;
+    position: fixed;
+    bottom:0;
+    width: 100%; 
+    text-align: right;
+  }
+
+.footer-container a {
+    color: inherit;
+    
+}
+
+
+
+/* Media Queries for responsive layout */
+@media screen and (min-width: 20rem) {
+        .cards-item {
+              width: 40%;
+          }
+
+                  
+        .card:hover {
+            transform: rotateX(10deg) scale(1.02, 1.02);
+          }
+
+    }
+
+@media screen and (min-width: 56rem) {
+        .cards-item {
+              width: 20%;
+              
+          }
+          .card-images:hover img {
+            opacity: 0.3;
+            
+          
+          }
+        
+     }
+@media screen and (max-width: 900px){
+  div #modal-desc {
+
+    grid-template-columns: none;
+    padding: 0px;
+    
+  }
+
+
+}
+/*@media screen and (min-width: 900px){
+  div #modal-desc img{
+
+   width: 80% !important;
+    
+  }
+
+}*/
+
+    
+@media screen and (max-width: 768px) {
+
+        #navigation {
+              background-color: inherit;
+              width: inherit;
+              }
+
+        header {
+              grid-template-columns: none;
+            }
+
+        .logo-container {
+              display: none;
+          }
+
+      
+        form[name="contact-us"] {
+            display: grid;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+
+        #customer-field{
+            margin-top: 10px;
+          }
+
+        input[type="text"], input[type="email"], select, textarea, input[type="submit"] {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2px;
+            
+            
+          }
+
+        form[name="contact-us"] textarea {
+            font-size: 12px;
+          
+          }
+
+         
+
+          .card-title{
+            font-size: 14px;
+            text-align: center;
+          }
+
+          .card-text{
+            display: none
+          }
+          div .text-block {
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+
+          .card-content hr {
+            display:none;
+
+          }
+        
+   
+ }
+
+
+@media screen and (max-width: 375px){
+
+        #main-content {
+          display: block;
+        }
+        
+        .cards {
+            margin: auto;  
+          }
+          
+          header {
+            display: block;
+          }
+            
+         .nav ul {
+            justify-content: center;
+          }
+          h1 {
+            font-size: 24px;
+          }
+                   
+}
+
+
+
+
+
+.card-images {
+  
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  height:300px;
+}
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+    overflow-y: auto;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  
+}
+
+
+.modal-content {
+  font-size: 2rem;
+  display: none;
+  width: 100%;
+}
+div .text-block p {
+
+  padding-bottom: 25px;
+}
+
+
+
+#modal-container {
+  padding:15px;
+}
+#modal-desc{
+  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-left:50px;
+  
+  
+  
+
+}
+.text-block{
+padding-left: 25px;
+padding-right: 25px;
+
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}

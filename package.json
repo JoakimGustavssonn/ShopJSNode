@@ -1,0 +1,31 @@
+{
+  "name": "rosenvantenodeexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "start:lambda": "netlify-lambda serve src",
+    "build:lambda": "netlify-lambda build src/",
+    "deploy:draft": "netlify deploy --dir=public --functions=functions",
+    "deploy:prod": "netlify deploy --dir=public --functions=functions --prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "encoding": "^0.1.13",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "googleapis": "^57.0.0",
+    "netlify-lambda": "^2.0.1",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.4",
+    "serverless-http": "^2.5.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
