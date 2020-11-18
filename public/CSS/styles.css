@@ -100,9 +100,16 @@ h1{
     text-align: center;
     padding: 20px;
     font-size: 56px;
+    
+  }
+
+  .modal-content h1 {
+
     font-family: 'Courgette', cursive;
   }
-  h2 {
+
+
+h2 {
     text-align: center;
     padding: 20px;
   }
@@ -112,7 +119,7 @@ p {
     padding: 10px;
   }
 
-  .gallery_btn {
+  .gallery-btn {
   background-color: rgba(255, 52, 170, 0.421);
   color: #fff;
   padding:10px;
@@ -121,7 +128,7 @@ p {
   box-shadow: 0px 0px 12px 8px rgba(255, 255, 255, 0.5);
   }
 
-  .gallery_btn:hover {
+  .gallery-btn:hover {
     background-color: var(--secondary-color);
   }
 
@@ -223,10 +230,7 @@ background-color: var(--secondary-color);
     overflow: hidden;
   }
 
-  #myImg {
-    background-image: url("../img/Hero_image.jpg");
-  }
-
+  
   
   /*Card title, fixed font size and color*/
   .card-title {
