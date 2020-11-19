@@ -5,15 +5,17 @@
     
     --primary-font-color: white;
     --standard-font-family: 'Raleway', Segoe UI, Verdana, sans-serif;
-    --secondary-font-family: Segoe UI, Verdana, sans-serif;
+    --secondary-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --standard-font-size: 1.1rem;
  }
 
  /* Set elements to a default zero padding and margin */
-* {
+*, ::after, ::before {
     padding:0;
     margin:0;
+    box-sizing: none;
   }
+  
 
 /* Base style */
 html {
@@ -24,7 +26,7 @@ html {
 
 body {
     background-color: var(--primary-color);
-  
+    color: var(--primary-font-color);
 }
 
 
@@ -38,12 +40,7 @@ hr {
  }
 
  .hero-image {
-  display: flex;
-	box-sizing: border-box;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../img/hero_red_mittens.JPG);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../img/Hero_img_Sheep.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
@@ -61,14 +58,17 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
+
 
 
 
 /* Header with a fixed height and grid columns "logo 1/3 and search 2/3" */
 header {
-    display:none;
-    background-color: var(--primary-color);
+    display:block;
+    background-color: var(--secondary-color);
 
   }
 
@@ -79,7 +79,7 @@ nav ul {
   text-align: center;
   padding: initial;
   font-weight: 300;
-  font-family: var(--standard-font-family);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
   
 }
@@ -87,13 +87,22 @@ nav li {
   display: inline-block;
   height: 40px;
   border-radius: 2px;
-  padding: 10px
+  padding: 45px;
+  background-color: var(--secondary-color);
+ 
 }
 nav li:hover {
   text-decoration: none;
-  background-color: var(--secondary-color);
+  background-color: #142a2e;
+  
 }
-nav a {color:inherit;}
+nav a {color:inherit; text-decoration: none;}
+a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
  
 /* Center H1 text*/
 h1{
@@ -119,18 +128,7 @@ p {
     padding: 10px;
   }
 
-  .shop-btn {
-  background-color: rgba(255, 52, 170, 0.421);
-  color: #fff;
-  padding:10px;
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0px 0px 12px 8px rgba(255, 255, 255, 0.5);
-  }
-
-  .shop-btn:hover {
-    background-color: var(--secondary-color);
-  }
+  
 
   
 
@@ -150,20 +148,10 @@ input[type="text"], input[type="email"], select, input[type="submit"] {
 }
 
 
-/*Styles applies to form named contact-us */
-form[name="contact-us"]{
-  border: 1px solid white;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  
-}
-
 /* Styles applies to the textarea element inside form named contact-us */
-form[name="contact-us"] textarea {
-  resize: none;
-  width: 80%;
+form[name="contact-us"]{
+ 
+  width: 200px;
   height: 100px;
   font-family:var(--secondary-font-family) ;
   font-size: var(--standard-font-size);
@@ -259,6 +247,10 @@ background-color: var(--secondary-color);
     bottom:0;
     width: 100%; 
     text-align: right;
+    
+  }
+  .footer-box {
+padding-right: 10px;
   }
 
 .footer-container a {
@@ -329,32 +321,15 @@ background-color: var(--secondary-color);
           }
 
       
-        form[name="contact-us"] {
-            display: grid;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          
+      
 
-        #customer-field{
-            margin-top: 10px;
-          }
-
-        input[type="text"], input[type="email"], select, textarea, input[type="submit"] {
+        input[type="submit"] {
             margin-left: auto;
             margin-right: auto;
             padding: 2px;
             
             
           }
-
-        form[name="contact-us"] textarea {
-            font-size: 12px;
-          
-          }
-
-         
 
           .card-title{
             font-size: 14px;
@@ -394,6 +369,12 @@ background-color: var(--secondary-color);
             
          .nav ul {
             justify-content: center;
+          }
+          nav li {
+            display: inline-block;
+            height: 20px;
+            padding: 15px;
+            
           }
           h1 {
             font-size: 24px;
