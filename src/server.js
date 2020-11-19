@@ -72,7 +72,7 @@ const oauth2Client = new OAuth2(
                   to: config.user, // hardcoded send to adress
                   replyTo: `${req.body.email}`, // Config of "replyto" field sets the email adress from EndUser above
                   subject: `${req.body.customername}`, //Subject of message sets to CustomerName
-                  text: `${req.body.message}` // Message text field
+                  text: `${req.body.message}, ${req.body.product}` // Message text field
                     }
   
   
