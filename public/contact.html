@@ -8,7 +8,7 @@
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./CSS/styles.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"> -->
     
 </head>
 <body>
@@ -19,7 +19,6 @@
                     <li><a  href="./index.html" > Hem</a></li>
                     <li><a href="./shop.html"> Butik</a></li>
                     <li><a href="./contact.html"> Kontakt</a></li>
-                    <li><a href="./about.html"> Om</a></li>
                 </ul>
             </nav>
             <hr>
@@ -30,31 +29,55 @@
                 
             
             <section class="main-container">
-                <div id="main-content" >
+                <div id="main-content"  style="margin-bottom: 30px;" >
                     <h1>Kontaktformulär</h1>
                     <p style ="text-align: center;">Fyll i formuläret om du önskar köpa en produkt</p>
 
                     <form name="contact-us" method="POST" role="form" action="/.netlify/functions/server/api/contact">
-                        <div class="form-row align-items-center">
-                            <div class="col-auto">
-                        <input type="text" class="form-control mb-2" id="customername" name="customername" placeholder="Namn" required autofocus>
-                    </div>
-                    <div class="col-auto">
-                        <input id="email" name="email" type="email" class="form-control mb-2" aria-describedby="emailHelp" placeholder="Epost-adress" required>
-                    </div>
-                        <select class="custom-select my-1 mr-sm-2">
-                            <option selected name="product">Välj Produkt</option>
-                            <option value="1">Vintermössa</option>
-                            <option value="2">Ullkudde</option>
-                            <option value="3">Blå vintervantar</option>
-                        </select>
-                          
-                            <div class="mb-3">
-                              <textarea id="message" name="message" class="form-control mb-2" placeholder="Meddelande..." required></textarea>
-                            </div>
-                                               
-                        <input type="submit" value="Send message">
-                    </div>
+                        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto">
+                                
+                                <div class="col-auto w-75 m-auto">
+                                    <input type="text" class="form-control" id="customername" name="customername" placeholder="Namn" required autofocus>
+                                </div>
+
+                                <div class="col-auto w-75 m-auto">
+                                    <input id="email" name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="E-postadress" required>
+                                </div>
+                                <div class="col-auto w-75 m-auto">
+                                    <select name="product" class="custom-select custom-select-sm w-auto " >
+                                            <option selected name="product" >Välj Produkt</option>
+                                            <option value="Vintermössa">Vintermössa</option>
+                                            <option value="Ullkudde">Ullkudde</option>
+                                            <option value="Blå vintervantar">Blå vintervantar</option>
+                                            <option value="Gröna Vantar">Gröna Vantar</option>
+                                            <option value="Röda Vantar">Röda Vantar</option>
+                                            
+                                    </select>
+                                </div>
+                                <div class="col-auto w-75 m-auto" >
+                                    <textarea  style="height: 200px;" id="message" name="message" class="form-control" placeholder="Meddelande..." required></textarea>
+                                    <input type="submit" value="Send message">
+                                </div>
+                                
+
+                               
+                                
+                        </div>     
+                        <div class="form-row w-100">
+                            
+                        </div> 
+                        <div class="form-row w-100">
+                                
+
+                                
+                                                        
+                                    
+                         </div>
+                         <div class="form-row w-50 m-auto">
+                           
+                         </div>
+                         
+
                     </form>
           
                 </div>

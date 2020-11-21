@@ -4,16 +4,16 @@
     --secondary-color: #0f1f22;
     
     --primary-font-color: white;
-    --standard-font-family: 'Raleway', Segoe UI, Verdana, sans-serif;
-    --secondary-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --standard-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    --secondary-font-family: 'Dancing Script', cursive;
     --standard-font-size: 1.1rem;
  }
 
  /* Set elements to a default zero padding and margin */
-*, ::after, ::before {
+*{
     padding:0;
     margin:0;
-    box-sizing: none;
+    
   }
   
 
@@ -35,8 +35,9 @@ hr {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    border-color: var(--secondary-color);
+    
     border-top:none;
+    
  }
 
  .hero-image {
@@ -58,7 +59,6 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
 }
 
@@ -79,9 +79,7 @@ nav ul {
   text-align: center;
   padding: initial;
   font-weight: 300;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
-  
+
 }
 nav li {
   display: inline-block;
@@ -112,10 +110,7 @@ h1{
     
   }
 
-  .modal-content h1 {
-
-    font-family: 'Courgette', cursive;
-  }
+  
 
 
 h2 {
@@ -150,11 +145,9 @@ input[type="text"], input[type="email"], select, input[type="submit"] {
 
 /* Styles applies to the textarea element inside form named contact-us */
 form[name="contact-us"]{
+  height: auto;
+
  
-  width: 200px;
-  height: 100px;
-  font-family:var(--secondary-font-family) ;
-  font-size: var(--standard-font-size);
  }
 
  /* Styles applies to the input element with type submit inside form named contact-us */
@@ -170,6 +163,15 @@ background-color: var(--secondary-color);
 }
 
 
+.headline-container{
+
+  height: 150px;
+  font-size: 24px;
+  text-align: center;
+  font-family: var(--secondary-font-family);
+  margin-top: 20px;
+}
+
 /* Card section */
 .cards {
     display: flex;
@@ -179,6 +181,7 @@ background-color: var(--secondary-color);
     padding: 0;
     overflow: hidden;
     justify-content: space-around;
+    padding-bottom: 80px;
     
   }
   
@@ -192,8 +195,9 @@ background-color: var(--secondary-color);
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.3);
-    -webkit-transition: transform ease-in-out .3s, height ease-in-out .3s;
-	  transition: transform ease-in-out .3s, height ease-in-out .3s;
+    -webkit-transition: transform ease-in-out .1s, height ease-in-out .1s;
+    transition: transform ease-in-out .1s, height ease-in-out .1s;
+    
   }
   
 
@@ -204,6 +208,9 @@ background-color: var(--secondary-color);
     flex-direction: column;
     padding: 1rem;
     text-align: center;
+  }
+  .card-content hr {
+    border-color: var(--secondary-color);
   }
 
   
@@ -223,9 +230,11 @@ background-color: var(--secondary-color);
   /*Card title, fixed font size and color*/
   .card-title {
     font-size: 24px;
-    text-transform: uppercase;
+    font-family: sans-serif;
+  
     font-weight: 300;
-    color: white;
+    
+
   }
 
   .card-text {
@@ -312,9 +321,20 @@ padding-right: 10px;
               width: inherit;
               }
 
+        nav li {
+                
+                height: 35px;
+                
+                padding: 35px;
+                
+               
+              }
+
         header {
               grid-template-columns: none;
+              
             }
+
 
         .logo-container {
               display: none;
@@ -358,14 +378,23 @@ padding-right: 10px;
         #main-content {
           display: block;
         }
+      
         
         .cards {
             margin: auto;  
+
           }
           
           header {
             display: block;
           }
+          .headline-container{
+
+            height: 150px;
+            font-size: 16px;
+            
+          }
+
             
          .nav ul {
             justify-content: center;
@@ -409,7 +438,7 @@ padding-right: 10px;
   height: 100%; /* Full height */
   
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgba(0,0,0,1); /* Black w/ opacity */
   
 }
 
